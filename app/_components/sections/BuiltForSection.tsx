@@ -9,7 +9,7 @@ export default function BuitForSection() {
         </h3>
         <div className="flex items-center justify-center mb-6">
           <p className="italic capitalize font-instrument-serif text-2xl leading-9">
-            connecton <br /> Convenience <br /> soft life
+            connection <br /> Convenience <br /> soft life
           </p>
         </div>
       </div>

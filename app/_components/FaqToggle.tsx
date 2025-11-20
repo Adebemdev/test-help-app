@@ -11,8 +11,6 @@ export default function FaqToggle({
   answer,
   defaultOpen = false,
 }: FaqToggleProps) {
-  console.log('vallllll' + defaultOpen);
-
   const [open, setOpen] = useState<boolean>(defaultOpen);
 
   return (

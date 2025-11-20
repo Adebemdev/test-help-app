@@ -1,7 +1,9 @@
+import RegistrationForm from '@/app/_components/RegistrationForm';
+
 export default function Page() {
   return (
-    <div>
-      <h1>Hello Register Provider</h1>
-    </div>
+    <main className="py-6 overflow-hidden">
+      <RegistrationForm />
+    </main>
   );
 }

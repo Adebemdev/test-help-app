@@ -63,8 +63,8 @@ export default function Footer() {
           <h4 className="font-lato font-semibold text-xl leading-[100%] text-white">
             Subscribe to our newsletter
           </h4>
-          <div className=" bg-red-600 flex w-full">
-            <div className="bg-blue-600">
+          <div className="flex w-full">
+            <div className="">
               <input
                 name="email"
                 type="email"
