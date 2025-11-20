@@ -11,7 +11,10 @@ export default function FaqToggle({
   answer,
   defaultOpen = false,
 }: FaqToggleProps) {
+  console.log('vallllll' + defaultOpen);
+
   const [open, setOpen] = useState<boolean>(defaultOpen);
+  console.log('vallllll' + open + defaultOpen);
 
   return (
     <section className="space-y-4">

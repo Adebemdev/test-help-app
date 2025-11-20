@@ -47,17 +47,14 @@ export default function FaqSection() {
         <FaqToggle
           question="Is Help App currently in my city ?"
           answer="Help App Africa is a platform that connects you with your nearest local service providers. Whether you need a plumber, electrician, cleaner, or any other professional, Help App Africa makes it easy to find and book reliable service providers."
-          defaultOpen
         />
         <FaqToggle
           question="How can i book a service provider ?"
           answer="Help App Africa is a platform that connects you with your nearest local service providers. Whether you need a plumber, electrician, cleaner, or any other professional, Help App Africa makes it easy to find and book reliable service providers."
-          defaultOpen
         />
         <FaqToggle
           question="Can i register as a provider on the platform ?"
           answer="Help App Africa is a platform that connects you with your nearest local service providers. Whether you need a plumber, electrician, cleaner, or any other professional, Help App Africa makes it easy to find and book reliable service providers."
-          defaultOpen
         />
       </div>
     </section>
