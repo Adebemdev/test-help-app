@@ -73,11 +73,15 @@ export default function Footer() {
                 className="p-4"
               />
             </div>
-            <div className="bg-green-400 p-2 flex items-center">
-              <span className="">Subscribe</span>
+            <div className="bg-white px-4 py-4 flex items-center">
+              <span className="text-primary font-lato font-bold text-base">
+                Subscribe
+              </span>
             </div>
           </div>
-          <p>Admin@Helpappafrica.com</p>
+          <p className="font-lato font-medium leading-[100%] text-base text-white">
+            Admin@Helpappafrica.com
+          </p>
         </div>
       </div>
     </footer>
