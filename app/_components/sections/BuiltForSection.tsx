@@ -2,7 +2,7 @@ import Card from '../Card';
 
 export default function BuitForSection() {
   return (
-    <section className="bg-[#FAF9F8] flex items-center justify-center flex-col pb-4 md:flex-row md:block ">
+    <section className="bg-[#FAF9F8] flex items-center justify-center flex-col pb-4 md:flex-row md:block">
       <div className="bg-blue-600 md:flex md:justify-between md:items-center md:max-w-5xl md:mx-auto">
         <div className="flex items-center justify-center flex-col gap-4">
           <h3 className="font-lato font-extrabold text-[28px] text-[#000000] leading-[100%]">
@@ -26,7 +26,8 @@ export default function BuitForSection() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row bg-red-600 md:w-full md:max-w-5xl md:mx-auto">
+      {/* <div className="flex flex-col md:flex-row bg-red-600 md:w-full md:max-w-5xl md:mx-auto"> */}
+      <div className="flex flex-col md:flex-row md:flex-wrap bg-red-600 md:w-full md:mx-auto">
         <Card
           number={1}
           title="Service Request Autonomy"

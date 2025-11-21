@@ -34,14 +34,14 @@ export interface CardProps {
 
 export default function Card({ number, title, description }: CardProps) {
   return (
-    <div className="flex gap-3 px-4 mb-6 items-start">
+    <div className="flex  px-4 mb-6 items-start w-full ">
       {/* Number (Mobile Only) */}
       <p className="md:hidden h-10 w-10 rounded-full border border-[#e6e6e685] flex items-center justify-center bg-white shrink-0">
         {number}
       </p>
 
       {/* Content */}
-      <div className="flex flex-col md:w-[384px]">
+      <div className="flex flex-col">
         <h3 className="font-lato text-2xl font-extrabold leading-tight text-black">
           {title}
         </h3>
