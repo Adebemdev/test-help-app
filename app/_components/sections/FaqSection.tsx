@@ -17,14 +17,15 @@ export default function FaqSection() {
       </div>
       <div className="hidden md:flex items-center flex-col justify-center gap-4">
         <div className="bg-white p-6 h-40 w-40 flex items-center justify-center border-[0.75px] border-[#E6E6E6] shadow-sm rounded-[5px]">
-          <Image
-            src={qrCode}
-            alt="The QRcode image"
-            width={100}
-            height={100}
-            quality={100}
-            className=""
-          />
+         <Image
+                      src="https://backend-api.helpappafrica.com/public/qrcode.png"
+                      alt="QR Code"
+                      width={130}
+                       
+                      height={130}
+                      
+                  
+                    />
         </div>
 
         <div className="py-6">
