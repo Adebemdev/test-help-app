@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Header from '@/app/_components/layout/Header';
-import Footer from '@/app/_components/layout/Footer';
+// import Footer from '@/app/_components/layout/Footer';
 import '@/app/_styles/global.css';
+import { Toaster } from '@/components/ui/sonner';
 
 import { Instrument_Serif, Lato } from 'next/font/google';
 
@@ -34,8 +35,8 @@ export default function RootLayout({
         className={`${instrumentSerif.variable} ${lato.variable} antialiased`}
       >
         <Header />
-        <main className="pt-[72px] overflow-hidden">{children}</main>
-        <Footer />
+        <main className="pt-20 overflow-hidden">{children}</main>
+        <Toaster richColors position="bottom-center" />
       </body>
     </html>
   );

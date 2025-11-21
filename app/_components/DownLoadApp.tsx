@@ -1,7 +1,7 @@
 'use client';
 
 import Image, { StaticImageData } from 'next/image';
-
+import Link from 'next/link';
 export interface StoreIcon {
   icon: StaticImageData | string;
   alt: string;
@@ -25,8 +25,8 @@ export default function DownLoapApp({
     <div className="flex  w-full items-center justify-center my-8">
       <div className="inline-flex items-center gap-4 rounded-full border border-[#E6E6E6] bg-white px-4 py-2 shadow-sm">
         <div className="flex items-center gap-1  justify-center">
-          <span className="text-sm font-extrabold text-primary/60 italic">
-            {label}
+          <span className="text-sm font-extrabold text-mainColor italic">
+            <Link href="/">{label}</Link>
           </span>
           <Image
             src={arrowIcon}
@@ -38,25 +38,29 @@ export default function DownLoapApp({
         </div>
         <div className="flex items-center gap-2">
           <div className=" rounded-full flex items-center justify-center border border-[#E6E6E6] p-2">
-            <Image
-              src={playStore.icon}
-              alt={playStore.alt}
-              height={playStore.size ?? 20}
-              quality={100}
-              width={playStore.size ?? 20}
-              className="object-cover w-full h-full"
-            />
+            <Link href="/">
+              <Image
+                src={playStore.icon}
+                alt={playStore.alt}
+                height={playStore.size ?? 20}
+                quality={100}
+                width={playStore.size ?? 20}
+                className="object-cover w-full h-full"
+              />
+            </Link>
           </div>
           <div className="h-6 w-px bg-gray-300"></div>
           <div className=" rounded-full p-2 flex items-center justify-center border border-[#E6E6E6]">
-            <Image
-              src={appStore.icon}
-              alt={appStore.alt}
-              height={appStore.size ?? 20}
-              quality={100}
-              width={appStore.size ?? 20}
-              className="object-cover w-full h-full"
-            />
+            <Link href="/">
+              <Image
+                src={appStore.icon}
+                alt={appStore.alt}
+                height={appStore.size ?? 20}
+                quality={100}
+                width={appStore.size ?? 20}
+                className="object-cover w-full h-full"
+              />
+            </Link>
           </div>
         </div>
       </div>
