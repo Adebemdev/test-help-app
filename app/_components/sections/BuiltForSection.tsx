@@ -1,32 +1,59 @@
-import Card from '../Card';
+import Card from "../Card";
 
 export default function BuitForSection() {
   return (
-    <section className="bg-[#FAF9F8] flex items-center justify-center flex-col pb-4 md:flex-row md:block ">
-      <div className="bg-blue-600 md:flex md:justify-between md:items-center md:max-w-5xl md:mx-auto">
-        <div className="flex items-center justify-center flex-col gap-4">
-          <h3 className="font-lato font-extrabold text-[28px] text-[#000000] leading-[100%]">
+    <section className="bg-[#FAF9F8] flex items-center justify-center flex-col pb-4 md:flex-row md:block pr-4 ">
+      <div
+        className=" md:flex md:justify-between md:items-end md:mb-[100px]
+      md:max-w-5xl md:mx-auto "
+      >
+        <div className="flex items-center   md:justify-between flex-col mb-10 md:mb-0">
+          <h3 className="font-lato font-extrabold md:text-[64px] text-[28px] text-[#000000] leading-[100%] mb-[20]">
             Built For
           </h3>
-          <div className="flex items-center justify-center mb-6">
-            <p className="italic capitalize font-instrument-serif text-2xl leading-9">
-              connection <br /> Convenience <br /> soft life
+          <div className="flex items-center justify-center flex-col gap-[16]">
+            <p className="italic capitalize font-instrument-serif md:text-[40px] text-[24px] ">
+              Connection
+            </p>
+            <p className="italic capitalize font-instrument-serif md:text-[40px] text-[24px]  ">
+              Convenience
+            </p>
+            <p className="italic capitalize font-instrument-serif md:text-[40px] text-[24px]  ">
+              Soft Life
             </p>
           </div>
         </div>
 
-        <div className="bg-red-600 md:py-5">
-          <p className="w-[361] text-black text-center font-lato font-semibold text-xl leading-[100%] -tracking-tight mb-12  md:w-[450px] md:text-3xl ">
-            Help App is built with{' '}
+        <div className=" md:py-0 ">
+          <p
+            className="w-[361]
+          md:items-end md:text-start
+          text-black text-center font-lato font-semibold text-xl leading-6
+           -tracking-tight mb-12  md:mb-[10]  md:w-[450px] md:text-[32px] md:leading-9 "
+          >
+            Help App is built with{" "}
             <span className="font-lato italic text-black/50">
               partnership, Seamless connection, User autonomy, Safety & Trust
-            </span>{' '}
+            </span>{" "}
             in mind ....
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row bg-red-600 md:w-full md:max-w-5xl md:mx-auto">
+      <div
+        className="flex flex-col md:flex-row md:w-full
+       md:max-w-5xl md:mx-auto md: gap-11"
+      >
+        {/* <div className='bg-pink-500 h-40 w-full flex'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minima corrupti earum architecto totam odio consectetur optio cum cumque saepe doloribus asperiores consequatur impedit, fugiat provident, dolores alias autem dignissimos?
+        </div>
+        <div className='bg-yellow-500 h-40 w-full flex'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maxime ullam molestiae corrupti temporibus, doloribus nihil nam? Totam molestiae dicta non sed voluptatem? Dolor, deleniti eligendi? Eligendi minima corrupti libero.
+        </div>
+
+        <div className='bg-green-500 h-40 w-full flex'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. In cum id assumenda laborum quae vel quam eaque aliquam, deleniti nobis a suscipit excepturi corporis voluptate deserunt minus voluptas impedit? Qui?
+        </div> */}
         <Card
           number={1}
           title="Service Request Autonomy"
