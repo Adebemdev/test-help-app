@@ -3,37 +3,45 @@ import { NextResponse } from 'next/server';
 import { formSchema } from '@/schema/index';
 
 // Whitelisted domains — add yours here
-const ALLOWED_ORIGINS = [
-  'http://localhost:3000',
-  'https://backend-api.helpappafrica.com/provider-community',
-];
+// const ALLOWED_ORIGINS = [
+//   'http://localhost:3000',
+//   'https://backend-api.helpappafrica.com/provider-community',
+// ];
 
-function corsHeaders(origin?: string) {
-  const allowedOrigin =
-    origin && ALLOWED_ORIGINS.includes(origin) ? origin : 'null';
+// function corsHeaders(origin?: string) {
+//   const allowedOrigin =
+//     origin && ALLOWED_ORIGINS.includes(origin) ? origin : 'null';
 
-  return {
-    'Access-Control-Allow-Origin': allowedOrigin,
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    // Uncomment only if you're allowing cookies
-    // 'Access-Control-Allow-Credentials': 'true',
-  };
-}
+//   return {
+//     'Access-Control-Allow-Origin': allowedOrigin,
+//     'Access-Control-Allow-Methods': 'POST, OPTIONS',
+//     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+//     // Uncomment only if you're allowing cookies
+//     // 'Access-Control-Allow-Credentials': 'true',
+//   };
+// }
 
 export async function POST(req: Request) {
-  const origin = req.headers.get('origin') ?? undefined;
+  //const origin = req.headers.get('origin') ?? undefined;
 
   try {
     const body = await req.json();
-    const parsed = formSchema.safeParse(body);
+    const response = await fetch(
+      'https://backend-api.helpappafrica.com/provider-community',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      }
+    );
+    const parsedResponse = await response.json();
 
-    if (!parsed.success) {
+    if (parsedResponse.statusCode > 300 || parsedResponse.statusCode < 200) {
       return NextResponse.json(
-        { success: false, errors: parsed.error.flatten() },
+        { success: false, errors: parsedResponse.message },
         {
-          status: 400,
-          headers: corsHeaders(origin),
+          status: parsedResponse.statusCode,
+          //  headers: corsHeaders(origin),
         }
       );
     }
@@ -44,7 +52,6 @@ export async function POST(req: Request) {
       { success: true, message: 'Registration successful' },
       {
         status: 200,
-        headers: corsHeaders(origin),
       }
     );
   } catch (error) {
@@ -53,17 +60,17 @@ export async function POST(req: Request) {
       { success: false, message: 'Server error' },
       {
         status: 500,
-        headers: corsHeaders(origin),
+        //    headers: corsHeaders(origin),
       }
     );
   }
 }
 
-export async function OPTIONS(req: Request) {
-  const origin = req.headers.get('origin') ?? undefined;
+// export async function OPTIONS(req: Request) {
+//   const origin = req.headers.get('origin') ?? undefined;
 
-  return new Response(null, {
-    status: 204,
-    headers: corsHeaders(origin),
-  });
-}
+//   return new Response(null, {
+//     status: 204,
+//     headers: corsHeaders(origin),
+//   });
+// }

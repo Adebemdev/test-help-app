@@ -3,7 +3,7 @@ import { toast } from 'sonner';
 import Image from 'next/image';
 import toastImg from '@/public/toast-img.svg';
 import cancelImg from '@/public/cancel-icon.svg';
-import { z } from 'zod';
+import { json, z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
@@ -89,22 +89,18 @@ export default function RegistrationForm() {
     console.log(values);
     setIsSubmitting(true);
     try {
-      const res = await fetch(
-        'https://backend-api.helpappafrica.com/provider-community',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(values),
-        }
-      );
-
+      const res = await fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values),
+      });
       const data = await res.json();
-      console.log(data);
+      console.log(`datae::::${JSON.stringify(data)}`);
       if (res.ok) {
         handleSuccessToast();
         form.reset();
       } else {
-        toast.error(data.message || 'Submission failed');
+        toast.error(data.errors || 'Submission failed');
       }
     } catch (error) {
       console.log(error);
