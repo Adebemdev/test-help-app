@@ -79,7 +79,7 @@ export default function HeroSection() {
           src={whatsappImg}
           width={70}
           height={70}
-          quality={100}
+         // quality={100}
           alt="Hero image one"
           className="w-20 h-20"
         />
