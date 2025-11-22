@@ -5,7 +5,7 @@ export default function BuitForSection() {
     <section className="bg-[#FAF9F8] flex items-center justify-center flex-col pb-4 md:flex-row md:block pr-4 ">
       <div
         className=" md:flex md:justify-between md:items-end md:mb-[100px]
-      md:max-w-5xl md:mx-auto "
+      md:max-w-5xl md:mx-auto"
       >
         <div className="flex items-center  md:justify-between flex-col mb-10 md:mb-0">
           <h3 className="font-lato font-extrabold md:text-[64px] text-[28px] text-[#000000] leading-[100%] mb-[20]">

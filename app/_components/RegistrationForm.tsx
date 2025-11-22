@@ -122,7 +122,7 @@ export default function RegistrationForm() {
             <h1 className="font-lato font-extrabold text-2xl text-black leading-[100%]">
               Register as a Provider
             </h1>
-            <p className="font-lato font-medium -tracking-normal text-sm leading-5 text-[#545454]">
+            <p className="font-lato font-medium -tracking-normal text-sm leading-5 text-[#545454] md:mb-6">
               Please fill in the following fields below correctly to be a part
               of our provider community.
             </p>
