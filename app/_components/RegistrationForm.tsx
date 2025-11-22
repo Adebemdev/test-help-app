@@ -115,7 +115,7 @@ export default function RegistrationForm() {
   }
 
   return (
-    <section className="bg-linear-to-b from-white to-greyColor w-full h-full md:p-10 border border-[#E6E6E6] rounded-xl">
+    <section className="bg-linear-to-b from-white to-greyColor w-full h-full md:p-10 border border-[#E6E6E6] rounded-xl  px-[16px] py-[24px]">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="">
           <div className="flex flex-col gap-4 md:mb-6">

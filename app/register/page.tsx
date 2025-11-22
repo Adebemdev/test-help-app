@@ -14,7 +14,7 @@ export default function Page() {
           className="object-cover w-full h-full"
         />
       </div>
-      <div className="w-[610px]">
+      <div className="w-[610px] px-[16px] py-[24px]">
         <RegistrationForm />
       </div>
     </main>

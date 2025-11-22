@@ -2,21 +2,35 @@ import Card from '../Card';
 
 export default function BuitForSection() {
   return (
-    <section className="bg-[#FAF9F8] flex items-center justify-center flex-col pb-4 md:flex-row md:block">
-      <div className="bg-blue-600 md:flex md:justify-between md:items-center md:max-w-5xl md:mx-auto">
-        <div className="flex items-center justify-center flex-col gap-4">
-          <h3 className="font-lato font-extrabold text-[28px] text-[#000000] leading-[100%]">
+    <section className="bg-[#FAF9F8] flex items-center justify-center flex-col pb-4 md:flex-row md:block pr-4 ">
+      <div
+        className=" md:flex md:justify-between md:items-end md:mb-[100px]
+      md:max-w-5xl md:mx-auto "
+      >
+        <div className="flex items-center  md:justify-between flex-col mb-10 md:mb-0">
+          <h3 className="font-lato font-extrabold md:text-[64px] text-[28px] text-[#000000] leading-[100%] mb-[20]">
             Built For
           </h3>
-          <div className="flex items-center justify-center mb-6">
-            <p className="italic capitalize font-instrument-serif text-2xl leading-9">
-              connection <br /> Convenience <br /> soft life
+          <div className="flex items-center justify-center flex-col gap-[16]">
+            <p className="italic capitalize font-instrument-serif md:text-[40px] text-[24px] ">
+              Connection
+            </p>
+            <p className="italic capitalize font-instrument-serif md:text-[40px] text-[24px]  ">
+              Convenience
+            </p>
+            <p className="italic capitalize font-instrument-serif md:text-[40px] text-[24px]  ">
+              Soft Life
             </p>
           </div>
         </div>
 
-        <div className="bg-red-600 md:py-5">
-          <p className="w-[361] text-black text-center font-lato font-semibold text-xl leading-[100%] -tracking-tight mb-12  md:w-[450px] md:text-3xl ">
+        <div className=" md:py-0 ">
+          <p
+            className="w-[361]
+          md:items-end md:text-start
+          text-black text-center font-lato font-semibold text-xl leading-6
+           -tracking-tight mb-12  md:mb-[10]  md:w-[450px] md:text-[32px] md:leading-9 "
+          >
             Help App is built with{' '}
             <span className="font-lato italic text-black/50">
               partnership, Seamless connection, User autonomy, Safety & Trust
@@ -26,8 +40,10 @@ export default function BuitForSection() {
         </div>
       </div>
 
-      {/* <div className="flex flex-col md:flex-row bg-red-600 md:w-full md:max-w-5xl md:mx-auto"> */}
-      <div className="flex flex-col md:flex-row md:flex-wrap bg-red-600 md:w-full md:mx-auto">
+      <div
+        className="flex flex-col md:flex-row md:w-full
+       md:max-w-5xl md:mx-auto md: gap-11"
+      >
         <Card
           number={1}
           title="Service Request Autonomy"

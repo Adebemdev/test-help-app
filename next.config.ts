@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
 module.exports = {
   images: {
     qualities: [100, 25, 50, 75],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "backend-api.helpappafrica.com",
+      },
+    ],
   },
 };
 
