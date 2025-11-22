@@ -2,23 +2,21 @@ import Card from '../Card';
 
 export default function BuitForSection() {
   return (
-    <section className="bg-[#FAF9F8] flex items-center justify-center flex-col pb-4 md:flex-row md:block pr-4 ">
-      <div
-        className=" md:flex md:justify-between md:items-end md:mb-[100px]
-      md:max-w-5xl md:mx-auto"
-      >
-        <div className="flex items-center  md:justify-between flex-col mb-10 md:mb-0">
+    // <section className="bg-[#FAF9F8] flex items-center justify-center flex-col pb-4 md:flex-row md:block pr-4 ">
+    <section className="flex items-center justify-center flex-col pb-4 md:flex-row md:block pr-4 md:px-[100] md:py-[100px]">
+      <div className="md:flex md:justify-between md:items-end md:mb-[100px]">
+        <div className="flex items-center md:items-start  md:justify-between flex-col mb-10 md:mb-0">
           <h3 className="font-lato font-extrabold md:text-[64px] text-[28px] text-[#000000] leading-[100%] mb-[20]">
             Built For
           </h3>
-          <div className="flex items-center justify-center flex-col gap-[16]">
-            <p className="italic capitalize font-instrument-serif md:text-[40px] text-[24px] ">
+          <div className="flex items-center justify-center flex-col gap-[16] md:items-start">
+            <p className="italic capitalize font-instrument-serif md:text-[40px] text-[24px]">
               Connection
             </p>
-            <p className="italic capitalize font-instrument-serif md:text-[40px] text-[24px]  ">
+            <p className="italic capitalize font-instrument-serif md:text-[40px] text-[24px]">
               Convenience
             </p>
-            <p className="italic capitalize font-instrument-serif md:text-[40px] text-[24px]  ">
+            <p className="italic capitalize font-instrument-serif md:text-[40px] text-[24px]">
               Soft Life
             </p>
           </div>
@@ -42,7 +40,7 @@ export default function BuitForSection() {
 
       <div
         className="flex flex-col md:flex-row md:w-full
-       md:max-w-5xl md:mx-auto md: gap-11"
+        md: gap-11"
       >
         <Card
           number={1}

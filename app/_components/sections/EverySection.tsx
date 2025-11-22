@@ -2,13 +2,13 @@ import Image from 'next/image';
 import everyImage from '@/public/every-image.svg';
 export default function EverySection() {
   return (
-    <section className="bg-[#FAF9F8] py-16">
-      <div className=" flex items-center justify-center flex-col ">
-        <h1 className="font-lato font-extrabold text-[#000000] text-3xl text-center leading-9  mb-6 md:w-[540px] md:text-[48px] md:leading-[100%]">
+    <section className="bg-[#FAF9F8] py-16 md:px-[100px] md:py-[60px]">
+      <div className=" flex items-center justify-center flex-col">
+        <h1 className="font-lato font-extrabold text-[#000000] text-3xl text-center leading-9  mb-6 md:w-[540px] md:text-[48px] md:leading-[100%] md:mb-[24px]">
           Everyday Life Made <br /> Easier
         </h1>
         <div className=" w-full flex items-center justify-center">
-          <p className="w-[300px] text-center tracking-tight font-lato text-lg leading-6 text-[#545454] mb-8 md:font-medium md:w-[700px] md:text-[24px] md:leading-[100%] md:tracking-normal">
+          <p className="w-[300px] text-center tracking-tight font-lato text-lg leading-6 text-[#545454] mb-8 md:font-medium md:w-[700px] md:text-[24px] md:leading-8 md:tracking-normal md:mb-[44px] md:text-center">
             No more calling random numbers or begging neighbors for help. Just a{' '}
             <span className="italic">scroll</span> and a{' '}
             <span className="italic">click</span>, a verified expert is already
@@ -27,7 +27,7 @@ export default function EverySection() {
           </div>
 
           <div className="">
-            <span className="text-mainColor font-lato font-bold capitalize text-lg italic h-[19px] w-[123px]">
+            <span className="text-mainColor font-lato font-bold capitalize text-lg italic h-[19px] w-[123px] md:text-[24px] md:mb-[84px]">
               Scan to download
             </span>
           </div>

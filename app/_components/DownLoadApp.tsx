@@ -22,12 +22,15 @@ export default function DownLoapApp({
   appStore,
 }: DownloadAppButtonProps) {
   return (
-    <div className="flex  w-full items-center justify-center my-8">
-      <div className="inline-flex items-center gap-4 rounded-full border border-[#E6E6E6] bg-white px-4 py-2 shadow-sm">
-        <div className="flex items-center gap-1  justify-center">
-          <span className="text-sm font-extrabold text-mainColor italic">
-            <Link href="/">{label}</Link>
-          </span>
+    <div className="flex w-full items-center justify-center w-[300px] mb-[32px] md:w-[322px]">
+      <div className="flex items-center bg-[#FFFFFF] justify-center gap-4 rounded-full border border-[#E6E6E6] bg-white px-[17px] py-[10px] md:px-[25] md:py-[15px]">
+        <div className="flex items-center gap-1 justify-center">
+          <Link
+            href="/"
+            className="text-[14px] font-extrabold w-[126px] w-[96px] text-mainColor italic  text-center"
+          >
+            {label}
+          </Link>
           <Image
             src={arrowIcon}
             alt="App image"
