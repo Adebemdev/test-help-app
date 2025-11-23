@@ -42,7 +42,7 @@ export default function RegistrationForm() {
   });
 
   function handleSuccessToast() {
-    toast(
+    const toastID = toast(
       <div className="w-full max-w-md rounded-xl border border-green-600 bg-green-50 shadow-md p-4 ">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
@@ -62,9 +62,11 @@ export default function RegistrationForm() {
             <Image
               src={cancelImg}
               alt="Toast Icon"
+              onClick={() => toast.dismiss(toastID)}
               width={20}
               height={20}
               quality={100}
+              className="cursor-pointer"
             />
           </div>
         </div>

@@ -4,11 +4,11 @@ export default function EverySection() {
   return (
     <section className="bg-[#FAF9F8] py-16 md:px-[100px] md:py-[60px]">
       <div className=" flex items-center justify-center flex-col">
-        <h1 className="font-lato font-extrabold text-[#000000] text-3xl text-center leading-9  mb-6 md:w-[540px] md:text-[48px] md:leading-[100%] md:mb-[24px]">
+        <h1 className="font-lato font-extrabold text-[#000000] text-3xl text-center leading-9  mb-6 md:w-[540px] md:text-[48px] md:leading-[100%] md:mb-6">
           Everyday Life Made <br /> Easier
         </h1>
         <div className=" w-full flex items-center justify-center">
-          <p className="w-[300px] text-center tracking-tight font-lato text-lg leading-6 text-[#545454] mb-8 md:font-medium md:w-[700px] md:text-[24px] md:leading-8 md:tracking-normal md:mb-[44px] md:text-center">
+          <p className="w-[300px] text-center tracking-tight font-lato text-lg leading-6 text-[#545454] mb-8 md:font-medium md:w-[700px] md:text-[24px] md:leading-8 md:tracking-normal md:mb-11 md:text-center">
             No more calling random numbers or begging neighbors for help. Just a{' '}
             <span className="italic">scroll</span> and a{' '}
             <span className="italic">click</span>, a verified expert is already

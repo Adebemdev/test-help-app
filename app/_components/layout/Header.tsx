@@ -4,7 +4,7 @@ import RegistrationLink from '@/app/_components/RegistrationLink';
 export default function Header() {
   return (
     // <header className="md:px-6 md:py-6 fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 md:border-b-2">
-    <header className="px-[14px] py-[33px] fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-gray-200 md:border-b-2 md:px-[100px] md:py-[30px]">
+    <header className="bg-white px-3.5 py-[33px] fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-gray-200 md:border-b-2 md:px-[100px] md:py-[30px]">
       <div className=" flex items-center justify-between">
         <Link href="/">
           <Logo />
@@ -14,6 +14,3 @@ export default function Header() {
     </header>
   );
 }
-
-// flex justify-between bg-white w-[393px] h-24 md:w-full py-8
-// flex w-full h-[50px] justify-between items-center mx-auto border-b-2 border-grayColor

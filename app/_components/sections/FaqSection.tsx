@@ -6,15 +6,14 @@ import google from '@/public/google-play-image.svg';
 // import qrCode from '@/public/qrcode-img.png';
 export default function FaqSection() {
   return (
-    // <section className="bg-[#FAF9F8] w-full py-[60px] md:py-[100px] md:px-[100px]">
     <section className="bg-[#FAF9F8] w-full py-[60px] md:py-[100px] md:px-[100px]">
       <div className=" md:flex md:flex-row">
         <div className=" md:flex flow-row items-center md:flex-col md:items-start">
-          <h2 className="text-center mb-[24px] leading-6 text-[28px] font-lato font-extrabold md:text-[64px] md:leading-[100%] md:text-left">
+          <h2 className="text-center mb-6 leading-6 text-[28px] font-lato font-extrabold md:text-[64px] md:leading-[100%] md:text-left">
             You Have Questions ?
           </h2>
           <div className="">
-            <p className="font-lato font-semibold text-xl -tracking-[1%]  mb-[40px] md:text-[32px] md:leading-[100%] text-center">
+            <p className="font-lato font-semibold text-xl -tracking-[1%]  mb-10 md:text-[32px] md:leading-[100%] text-center">
               We have answers for you ...
             </p>
           </div>
@@ -38,7 +37,7 @@ export default function FaqSection() {
           </div>
         </div>
         {/* Foundation /primary /primary -300 */}
-        <div className="bg-linear-to-b from-white to-[#EEECE8] w-full py-[24px] border border-[#E6E6E6] md:w-[776px] rounded-sm">
+        <div className="bg-linear-to-b from-white to-[#EEECE8] w-full py-6 border border-[#E6E6E6] md:w-[776px] rounded-sm">
           <FaqToggle
             question="What is Help App all about ?"
             answer="Help App Africa is a platform that connects you with your nearest local service providers. Whether you need a plumber, electrician, cleaner, or any other professional, Help App Africa makes it easy to find and book reliable service providers."
