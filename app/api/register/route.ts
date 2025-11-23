@@ -1,29 +1,7 @@
 'use server';
 import { NextResponse } from 'next/server';
-import { formSchema } from '@/schema/index';
-
-// Whitelisted domains — add yours here
-// const ALLOWED_ORIGINS = [
-//   'http://localhost:3000',
-//   'https://backend-api.helpappafrica.com/provider-community',
-// ];
-
-// function corsHeaders(origin?: string) {
-//   const allowedOrigin =
-//     origin && ALLOWED_ORIGINS.includes(origin) ? origin : 'null';
-
-//   return {
-//     'Access-Control-Allow-Origin': allowedOrigin,
-//     'Access-Control-Allow-Methods': 'POST, OPTIONS',
-//     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-//     // Uncomment only if you're allowing cookies
-//     // 'Access-Control-Allow-Credentials': 'true',
-//   };
-// }
 
 export async function POST(req: Request) {
-  //const origin = req.headers.get('origin') ?? undefined;
-
   try {
     const body = await req.json();
     const response = await fetch(
@@ -65,12 +43,3 @@ export async function POST(req: Request) {
     );
   }
 }
-
-// export async function OPTIONS(req: Request) {
-//   const origin = req.headers.get('origin') ?? undefined;
-
-//   return new Response(null, {
-//     status: 204,
-//     headers: corsHeaders(origin),
-//   });
-// }

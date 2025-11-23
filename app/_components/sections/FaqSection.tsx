@@ -6,15 +6,18 @@ import google from '@/public/google-play-image.svg';
 // import qrCode from '@/public/qrcode-img.png';
 export default function FaqSection() {
   return (
+    // <section className="bg-[#FAF9F8] w-full py-[60px] md:py-[100px] md:px-[100px]">
     <section className="bg-[#FAF9F8] w-full py-[60px] md:py-[100px] md:px-[100px]">
-      <div className="max-w-4xl md:max-w-7xl md:flex md:flex-row">
-        <div className=" md:flex flow-row md:flex-col md:items-center">
-          <h2 className="text-center mb-[24px] leading-6 text-[28px] font-lato font-extrabold md:text-[64px] md:leading-[100%]">
+      <div className=" md:flex md:flex-row">
+        <div className=" md:flex flow-row items-center md:flex-col md:items-start">
+          <h2 className="text-center mb-[24px] leading-6 text-[28px] font-lato font-extrabold md:text-[64px] md:leading-[100%] md:text-left">
             You Have Questions ?
           </h2>
-          <p className="font-lato font-semibold text-xl -tracking-[1%] px-[79px] mb-[40px] md:text-[32px] md:leading-[100%] md:text-center">
-            We have answers for you ...
-          </p>
+          <div className="">
+            <p className="font-lato font-semibold text-xl -tracking-[1%]  mb-[40px] md:text-[32px] md:leading-[100%] text-center">
+              We have answers for you ...
+            </p>
+          </div>
           <div className="hidden md:block md:mb-2">
             <Image
               src="https://backend-api.helpappafrica.com/public/qrcode.png"

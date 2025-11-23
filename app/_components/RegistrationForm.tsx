@@ -1,12 +1,13 @@
-"use client";
-import { toast } from "sonner";
-import Image from "next/image";
-import toastImg from "@/public/toast-img.svg";
-import cancelImg from "@/public/cancel-icon.svg";
-import { json, z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { useState } from "react";
+
+'use client';
+import { toast } from 'sonner';
+import Image from 'next/image';
+import toastImg from '@/public/toast-img.svg';
+import cancelImg from '@/public/cancel-icon.svg';
+
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { useState } from 'react';
 
 // import the form components
 import { Button } from "@/components/ui/button";
@@ -17,12 +18,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { formSchema } from "@/schema";
-import BouncingDots from "./BouncingDots";
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { formSchema } from '@/schema';
+import BouncingDots from './BouncingDots';
+import z from 'zod';
 export default function RegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
@@ -57,9 +59,7 @@ export default function RegistrationForm() {
               Submitted Successfully !!!
             </h2>
           </div>
-          {/* <button className="text-gray-600 hover:text-black h-5 w-5 border-2 border-black rounded-full  text-lg font-bold">
-            ✕
-          </button> */}
+
           <div className="">
             <Image
               src={cancelImg}

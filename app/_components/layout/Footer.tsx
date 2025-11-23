@@ -5,7 +5,7 @@ import whatsapp from '@/public/whatsapp.svg';
 import linkedInLogo from '@/public/linkedIn.svg';
 export default function Footer() {
   return (
-    <footer className="bg-[#42114A] py-10 px-[16px] md:py-[80px] md:px-[100px]">
+    <footer className="bg-[#42114A] py-[40px] px-[16px] md:py-[80px] md:px-[100px]">
       <div className="max-w-4xl md:mx-auto md:max-w-7xl md:flex md:justify-between">
         <div className="flex flex-col gap-10 md:items-center md:justify-center">
           <p className="font-lato font-medium text-2xl italic text-white leading-[100%] md:text-[40px] md:font-medium">
@@ -32,7 +32,7 @@ export default function Footer() {
                 className="w-[26px] h-[26px] md:w-10 md:h-10"
               />
             </Link>
-            <Link href="/">
+            <Link href="https://wa.me/2348054648121">
               <Image
                 src={whatsapp}
                 alt="WhatSapp logo"
