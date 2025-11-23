@@ -1,3 +1,4 @@
+
 'use client';
 import { toast } from 'sonner';
 import Image from 'next/image';
@@ -9,7 +10,7 @@ import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 
 // import the form components
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -31,19 +32,20 @@ export default function RegistrationForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      fullName: '',
-      phoneNumber: '',
-      email: '',
-      businessName: '',
-      serviceType: '',
-      location: '',
-      how_do_you_hear_about_us: 'social_media',
+      fullName: "",
+      phoneNumber: "",
+      email: "",
+      businessName: "",
+      serviceType: "",
+      location: "",
+      how_do_you_hear_about_us: "social_media",
     },
   });
 
   function handleSuccessToast() {
     toast(
-      <div className="w-full max-w-md rounded-xl border border-green-600 bg-green-50 shadow-md p-4">
+      
+ <div className="w-full max-w-md rounded-xl border border-green-600 bg-green-50 shadow-md p-4 ">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Image
@@ -85,30 +87,27 @@ export default function RegistrationForm() {
 
   // Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
     setIsSubmitting(true);
     try {
-      const res = await fetch('/api/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
       });
       const data = await res.json();
-      console.log(`datae::::${JSON.stringify(data)}`);
       if (res.ok) {
         handleSuccessToast();
         form.reset();
       } else {
-        toast.error(data.errors || 'Submission failed');
+        toast.error(data.errors || "Submission failed");
       }
     } catch (error) {
       console.log(error);
-      toast.error('Something went wrong');
+      toast.error("Something went wrong");
     } finally {
       setIsSubmitting(false);
     }
   }
-
   return (
     <section className="bg-linear-to-b from-white to-greyColor w-full h-full md:p-10 border border-[#E6E6E6] rounded-xl  px-[16px] py-[24px]">
       <Form {...form}>
@@ -122,12 +121,12 @@ export default function RegistrationForm() {
               of our provider community.
             </p>
           </div>
-          <div className="w-full flex flex-col md:gap-2">
+          <div className="w-full flex flex-col  mt-[31]">
             <FormField
               control={form.control}
               name="fullName"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="mb-3 gap-1.5">
                   <FormLabel className="font-lato font-semibold text-sm leading-5 tracking-[1.5%] text-[#333333]">
                     Full Name
                   </FormLabel>
@@ -135,7 +134,9 @@ export default function RegistrationForm() {
                     <Input
                       placeholder="E.g Olayinka Chukwuemeka Hassan"
                       {...field}
-                      className="bg-[#FFFFFF] py-4 px-3 font-lato text-sm leading-1 tracking-normal text-[#B0B0B0] md:w-full"
+                      className="bg-[#FFFFFF]
+                        placeholder:font-medium   placeholder:text-[#B0B0B0]  
+                        py-4 px-3 font-lato text-sm leading-1 tracking-normal md:w-full"
                     />
                   </FormControl>
                   <FormMessage />
@@ -148,15 +149,18 @@ export default function RegistrationForm() {
                 control={form.control}
                 name="phoneNumber"
                 render={({ field }) => (
-                  <FormItem className=" md:w-1/2 md:flex md:flex-col py-2">
+                  <FormItem className=" md:w-1/2 md:flex md:flex-col py-2 mb-3 gap-1.5">
                     <FormLabel className="font-lato font-semibold text-sm leading-5 tracking-[1.5%] text-[#333333]">
                       Phone Number
                     </FormLabel>
                     <FormControl>
                       <Input
+                        type="number"
                         placeholder="E.g 081*********"
                         {...field}
-                        className="bg-[#FFFFFF] py-4 px-3 font-lato text-sm leading-1 tracking-normal text-[#B0B0B0]"
+                        className="bg-[#FFFFFF] 
+                          placeholder:font-medium   placeholder:text-[#B0B0B0] 
+                        py-4 px-3 font-lato text-sm leading-1 tracking-normal "
                       />
                     </FormControl>
                     <FormMessage />
@@ -167,15 +171,23 @@ export default function RegistrationForm() {
                 control={form.control}
                 name="email"
                 render={({ field }) => (
-                  <FormItem className="md:w-1/2">
-                    <FormLabel className="font-lato font-semibold text-sm leading-5 tracking-[1.5%] text-[#333333]">
+                  <FormItem className="md:w-1/2 mb-3 gap-1.5">
+                    <FormLabel
+                      className="font-lato font-semibold text-sm leading-5 tracking-[1.5%]
+                    
+                    text-[#333333]"
+                    >
                       Email Address
                     </FormLabel>
                     <FormControl>
                       <Input
+                        type="email"
                         placeholder="E.g Olayi**@gmail.com"
                         {...field}
-                        className="bg-[#FFFFFF]   py-4 px-3 font-lato text-sm leading-1 tracking-normal text-[#B0B0B0]"
+                        className="bg-[#FFFFFF] 
+                        
+                        placeholder:font-medium   placeholder:text-[#B0B0B0] 
+                        py-4 px-3 font-lato text-sm leading-1 tracking-normal "
                       />
                     </FormControl>
                     <FormMessage />
@@ -189,7 +201,7 @@ export default function RegistrationForm() {
                 control={form.control}
                 name="businessName"
                 render={({ field }) => (
-                  <FormItem className="md:w-1/2 md:mb-4">
+                  <FormItem className="md:w-1/2 mb-3 gap-1.5">
                     <FormLabel className="font-lato font-semibold text-sm leading-5 tracking-[1.5%] text-[#333333]">
                       Business Name
                     </FormLabel>
@@ -197,7 +209,7 @@ export default function RegistrationForm() {
                       <Input
                         placeholder="E.g Ola Ventures Limited"
                         {...field}
-                        className="bg-[#FFFFFF]  py-4 px-3 font-lato text-sm leading-1 tracking-normal text-[#B0B0B0]"
+                        className="bg-[#FFFFFF]  placeholder:font-medium   placeholder:text-[#B0B0B0]   py-4 px-3 font-lato text-sm leading-1 tracking-normal "
                       />
                     </FormControl>
                     <FormMessage />
@@ -208,15 +220,15 @@ export default function RegistrationForm() {
                 control={form.control}
                 name="serviceType"
                 render={({ field }) => (
-                  <FormItem className="md:w-1/2 md:mb-4">
+                  <FormItem className="md:w-1/2 mb-3 gap-1.5">
                     <FormLabel className="font-lato font-semibold text-sm leading-5 tracking-[1.5%] text-[#333333]">
                       Service Type
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="E.g Carpentar"
+                        placeholder="E.g Carpenter"
                         {...field}
-                        className="bg-[#FFFFFF]  py-4 px-3 font-lato text-sm leading-1 tracking-normal text-[#B0B0B0]"
+                        className="bg-[#FFFFFF]  py-4 px-3   placeholder:font-medium   placeholder:text-[#B0B0B0]  font-lato text-sm leading-1 tracking-normal"
                       />
                     </FormControl>
                     <FormMessage />
@@ -228,15 +240,15 @@ export default function RegistrationForm() {
               control={form.control}
               name="location"
               render={({ field }) => (
-                <FormItem className="md:mb-8">
+                <FormItem className="mb-8 gap-1.5 ">
                   <FormLabel className="font-lato font-semibold text-sm leading-5 tracking-[1.5%] text-[#333333]">
                     Location
                   </FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="E.g Lagso State, Nigeria."
+                      placeholder="E.g Lagos State, Nigeria."
                       {...field}
-                      className="bg-[#FFFFFF] py-4 px-3 font-lato text-sm leading-1 tracking-normal text-[#B0B0B0]"
+                      className="bg-[#FFFFFF] py-4 px-3 font-lato   placeholder:font-medium   placeholder:text-[#B0B0B0]  text-sm leading-1 tracking-normal "
                     />
                   </FormControl>
                   <FormMessage />
@@ -248,8 +260,8 @@ export default function RegistrationForm() {
             control={form.control}
             name="how_do_you_hear_about_us"
             render={({ field }) => (
-              <FormItem className=" flex flex-col">
-                <FormLabel className="font-lato font-semibold text-sm leading-5 tracking-[1.5%] text-[#333333] md:mb-6">
+              <FormItem className=" flex flex-col  ">
+                <FormLabel className="font-lato font-semibold text-sm leading-5 tracking-[1.5%] text-[#333333] md:mb-4">
                   How did you hear about us ?
                 </FormLabel>
                 <FormControl>
@@ -258,11 +270,11 @@ export default function RegistrationForm() {
                     defaultValue={field.value}
                     className=" md:flex md:flex-wrap"
                   >
-                    <div className="flex gap-3  w-[115px] md:justify-between">
+                    <div className="flex items-center gap-3">
                       <RadioGroupItem
                         value="social_media"
                         id="r1"
-                        className="bg-white"
+                        className="bg-white h-6 w-6"
                       />
 
                       <Label
@@ -277,7 +289,7 @@ export default function RegistrationForm() {
                       <RadioGroupItem
                         value="family_friends"
                         id="r2"
-                        className="bg-white"
+                        className="bg-white h-6 w-6"
                       />
 
                       <Label
@@ -292,7 +304,7 @@ export default function RegistrationForm() {
                       <RadioGroupItem
                         value="fliers"
                         id="r3"
-                        className="bg-white"
+                        className="bg-white h-6 w-6"
                       />
                       <Label
                         htmlFor="r3"
@@ -305,7 +317,7 @@ export default function RegistrationForm() {
                       <RadioGroupItem
                         value="google_search"
                         id="r4"
-                        className="bg-white"
+                        className="bg-white h-6 w-6"
                       />
                       <Label
                         htmlFor="r4"
@@ -318,7 +330,7 @@ export default function RegistrationForm() {
                       <RadioGroupItem
                         value="blog_article"
                         id="r5"
-                        className="bg-white"
+                        className="bg-white h-6 w-6"
                       />
                       <Label
                         htmlFor="r5"
@@ -333,10 +345,13 @@ export default function RegistrationForm() {
               </FormItem>
             )}
           />
-          <div className="w-full h-full  flex items-center justify-end md:mt-10">
+
+          <div className="w-full h-full  flex items-center justify-end md:mt-[73] mt-[26]">
             <Button
               // className="text-white bg-[#9C28B1] w-full font-lato font-bold text-base h-full py-3 md:w-1/2"
-              className="relative flex items-center justify-center bg-[#9C28B1] text-white font-lato font-bold text-base px-6 py-3 rounded-md md:w-1/3 w-full md:max-w-[300px] transition-all"
+              className="relative flex items-center justify-center bg-[#9C28B1] text-white
+               font-lato font-bold text-base px-6 py-3 rounded-md md:w-1/3 w-full hover:bg-[#9C28B1]
+               md:max-w-[300px] transition-all"
               type="submit"
             >
               {isSubmitting ? (
@@ -344,7 +359,7 @@ export default function RegistrationForm() {
                   <BouncingDots color="white" baseHeight={0} maxSize={10} />
                 </div>
               ) : (
-                'Submit'
+                "Submit"
               )}
             </Button>
           </div>
