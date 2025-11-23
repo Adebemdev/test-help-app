@@ -1,4 +1,3 @@
-
 'use client';
 import { toast } from 'sonner';
 import Image from 'next/image';
@@ -10,7 +9,7 @@ import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 
 // import the form components
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -32,20 +31,19 @@ export default function RegistrationForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      fullName: "",
-      phoneNumber: "",
-      email: "",
-      businessName: "",
-      serviceType: "",
-      location: "",
-      how_do_you_hear_about_us: "social_media",
+      fullName: '',
+      phoneNumber: '',
+      email: '',
+      businessName: '',
+      serviceType: '',
+      location: '',
+      how_do_you_hear_about_us: 'social_media',
     },
   });
 
   function handleSuccessToast() {
     toast(
-      
- <div className="w-full max-w-md rounded-xl border border-green-600 bg-green-50 shadow-md p-4 ">
+      <div className="w-full max-w-md rounded-xl border border-green-600 bg-green-50 shadow-md p-4 ">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Image
@@ -89,9 +87,9 @@ export default function RegistrationForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     try {
-      const res = await fetch("/api/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const res = await fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values),
       });
       const data = await res.json();
@@ -99,17 +97,17 @@ export default function RegistrationForm() {
         handleSuccessToast();
         form.reset();
       } else {
-        toast.error(data.errors || "Submission failed");
+        toast.error(data.errors || 'Submission failed');
       }
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong");
+      toast.error('Something went wrong');
     } finally {
       setIsSubmitting(false);
     }
   }
   return (
-    <section className="bg-linear-to-b from-white to-greyColor w-full h-full md:p-10 border border-[#E6E6E6] rounded-xl  px-[16px] py-[24px]">
+    <section className="bg-linear-to-b from-white to-greyColor w-full h-full md:p-10 border border-[#E6E6E6] rounded-xl  px-4 py-6">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="">
           <div className="flex flex-col gap-4 md:mb-6">
@@ -359,7 +357,7 @@ export default function RegistrationForm() {
                   <BouncingDots color="white" baseHeight={0} maxSize={10} />
                 </div>
               ) : (
-                "Submit"
+                'Submit'
               )}
             </Button>
           </div>
